@@ -1,0 +1,23 @@
+class Solution {
+    public boolean isAnagram(String s, String t) {
+          //convert the string to lowercase
+        s.toLowerCase();
+        t.toLowerCase();
+        //befire moving ahead check if the both have same length
+        if(s.length()==t.length()){
+            //convert to char array
+            char[] sCharArray=s.toCharArray();
+            char[] tCharArray=t.toCharArray();
+
+            //sort the char arrays
+            Arrays.sort(sCharArray);
+            Arrays.sort(tCharArray);
+            //if they are equal then it is anagram
+            boolean result = Arrays.equals(sCharArray, tCharArray);
+            if(result){
+                return true;
+            }
+        }
+        return false; 
+    }
+}
