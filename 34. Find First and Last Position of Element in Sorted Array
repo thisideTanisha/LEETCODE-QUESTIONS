@@ -1,0 +1,43 @@
+class Solution {
+    public int[] searchRange(int[] nums, int target) {
+      int first=findFirst(nums, target) ;
+   int last=findLast(nums,target) ;
+   return new int[]{first,last} ;   
+    }
+
+    public static int findFirst(int []nums,int target){
+        int l=0,h=nums.length-1,result=-1;
+     while(l<=h){
+        int mid=(l+h)/2;
+        if(nums[mid]==target){
+            result =mid;
+            h=mid-1;//check if there are more same target value in the left side of mid
+        }
+        else if(nums[mid]<target){
+            l=mid+1;
+        }
+        else{
+            h=mid-1;
+        }
+     }
+     return result;
+    }
+
+    public static int findLast(int nums[], int target){
+        int l=0,h=nums.length-1,result=-1;
+        while(l<=h){
+           int mid=(l+h)/2;
+           if(nums[mid]==target){
+            result= mid;
+            l=mid+1;// check if there are more target number in the right of mid 
+           }
+           else if(nums[mid]<target){
+            l=mid+1;
+           }
+           else{
+            h=mid-1;
+           }
+    }
+    return result;
+}
+}
