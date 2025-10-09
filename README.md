@@ -1,3 +1,5 @@
 # LEETCODE-QUESTIONS
-This repository consist of all the questions I have completed in leetcode .
+
+Hey , I am Tanisha yadav.
+This repository of mine consist of all the questions I do everyday in leetcode .
 Language used: JAVA
